@@ -6,22 +6,20 @@ import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 const services = [
-  { label: "Optimización de bodegas", href: "#servicios" },
-  { label: "Rack Industrial", href: "#productos" },
-  { label: "Mantenimiento de Racks", href: "#servicios" },
+  { label: "Optimización de bodegas", href: "/layout-de-bodega/" },
+  { label: "Rack Industrial", href: "/rack-industrial/" },
+  { label: "Mantenimiento de Racks", href: "/mantenimiento-de-racks/" },
+  { label: "Servicios para racks industriales", href: "/servicios-para-racks-industriales/" },
 ];
 
 const products = [
-  { label: "Altillos Metálicos", href: "#productos" },
-  { label: "Estantes de Ángulos Ranurados", href: "#productos" },
-  { label: "Cantilever", href: "#productos" },
-  { label: "Mini Rack", href: "#productos" },
-  { label: "Rack Multinivel o Rack Picking Manual", href: "#productos" },
-  { label: "Rack Dinámico", href: "#productos" },
-  { label: "Rack Drive In", href: "#productos" },
-  { label: "Rack Flow", href: "#productos" },
-  { label: "Rack Selectivo", href: "#productos" },
-  { label: "Rack para Carga Pesada o Twinlode Racking", href: "#productos" },
+  { label: "Rack Selectivo", href: "/productos/rack-selectivo/" },
+  { label: "Rack Industrial", href: "/rack-industrial/" },
+  { label: "Rack de Almacenaje", href: "/rack-de-almacenaje/" },
+  { label: "Rack Dinámico", href: "/blog/rack-selectivo-vs-rack-dinamico/" },
+  { label: "Racks para Pallets", href: "/blog/racks-para-pallets-medidas-capacidad-seguridad/" },
+  { label: "Cantilever", href: "/#productos" },
+  { label: "Mini Rack", href: "/#productos" },
 ];
 
 export function Header() {
@@ -53,7 +51,7 @@ export function Header() {
             Home
           </Link>
           <Link
-            href="#quienes-somos"
+            href="/#quienes-somos"
             className="px-4 py-2 text-sm font-medium text-white transition-colors hover:text-brand-blue"
           >
             Quiénes somos
@@ -110,13 +108,13 @@ export function Header() {
           </div>
 
           <Link
-            href="#contacto"
+            href="/#contacto"
             className="px-4 py-2 text-sm font-medium text-white transition-colors hover:text-brand-blue"
           >
             Contacto
           </Link>
           <Link
-            href="#blog"
+            href="/blog/como-elegir-racks-para-bodegas/"
             className="px-4 py-2 text-sm font-medium text-white transition-colors hover:text-brand-blue"
           >
             Blog
@@ -139,7 +137,7 @@ export function Header() {
           <Link href="/" className="block py-2 text-sm text-white" onClick={() => setMobileOpen(false)}>
             Home
           </Link>
-          <Link href="#quienes-somos" className="block py-2 text-sm text-white" onClick={() => setMobileOpen(false)}>
+          <Link href="/#quienes-somos" className="block py-2 text-sm text-white" onClick={() => setMobileOpen(false)}>
             Quiénes somos
           </Link>
           <div>
@@ -176,10 +174,10 @@ export function Header() {
               </div>
             )}
           </div>
-          <Link href="#contacto" className="block py-2 text-sm text-white" onClick={() => setMobileOpen(false)}>
+          <Link href="/#contacto" className="block py-2 text-sm text-white" onClick={() => setMobileOpen(false)}>
             Contacto
           </Link>
-          <Link href="#blog" className="block py-2 text-sm text-white" onClick={() => setMobileOpen(false)}>
+          <Link href="/blog/como-elegir-racks-para-bodegas/" className="block py-2 text-sm text-white" onClick={() => setMobileOpen(false)}>
             Blog
           </Link>
         </nav>

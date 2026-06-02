@@ -9,9 +9,32 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  title: "Somos Ingenieros Fabricantes de Rack para Bodegas en Chile",
+  metadataBase: new URL("https://ingerack.cl"),
+  title: {
+    default: "Racks para bodegas en Chile | Ingerack",
+    template: "%s | Ingerack",
+  },
   description:
-    "Entregamos tu rack para bodegas pequeñas o grandes, desde 3 semanas, desarmamos, transportamos, montamos, optimizamos costos por escala, garantía mín. 2 años",
+    "Diseño, fabricación y montaje de racks para bodegas en Chile. Cotiza rack industrial, rack selectivo y servicios de mantenimiento con Ingerack.",
+  keywords: [
+    "racks para bodegas",
+    "rack industrial",
+    "rack selectivo",
+    "racks industriales",
+    "mantenimiento de racks",
+  ],
+  alternates: {
+    canonical: "https://ingerack.cl/",
+  },
+  openGraph: {
+    title: "Racks para bodegas en Chile | Ingerack",
+    description:
+      "Soluciones de rack industrial, rack selectivo, layout de bodega y mantenimiento para empresas en Chile.",
+    url: "https://ingerack.cl/",
+    siteName: "Ingerack",
+    locale: "es_CL",
+    type: "website",
+  },
   icons: {
     icon: "/images/ingerack-ico.webp",
   },
