@@ -6,43 +6,51 @@ const products = [
     title: "Altillo Metálico",
     description: "Duplica o triplica tu capacidad de almacenamiento en altura.",
     image: "/images/products/almacenes-picking.webp",
+    href: "/#productos",
   },
   {
     title: "Rack Selectivo",
     description: "Almacenar productos de diferentes tamaños a buen precio.",
     image: "/images/products/rack-selectivo.webp",
+    href: "/productos/rack-selectivo/",
   },
   {
     title: "Rack Drive In",
     description: "Aprovecha al máximo la profundidad de tu bodega.",
     image: "/images/products/rack-drive-in.webp",
+    href: "/rack-de-almacenaje/",
   },
   {
     title: "Rack Dinámico",
     description:
       "Agiliza la rotación de tu inventario con almacenamiento FIFO.",
     image: "/images/products/rack-dinamico-fifo.jpg",
+    href: "/blog/rack-selectivo-vs-rack-dinamico/",
   },
   {
     title: "Mini Rack",
     description: "Solución modular para cargas más livianas.",
     image: "/images/products/rack-selectivo-frontal.webp",
+    href: "/rack-de-almacenaje/",
   },
   {
     title: "Ángulo Ranurado",
     description: "Almacenamiento flexible y económico.",
     image: "/images/products/angulo-ranurado.webp",
+    href: "/rack-de-almacenaje/",
   },
   {
     title: "Rack Recojo Manual",
     description:
       "Ideal para selección y manipulación rápida de productos.",
     image: "/images/products/rack-drive-in-front-1.webp",
+    href: "/rack-de-almacenaje/",
   },
   {
     title: "Cantilever",
     description: "Perfecto para productos largos o voluminosos.",
     image: "/images/products/rack-drive-in-front.webp",
+    href: "/rack-industrial/",
   },
 ];
 
@@ -56,7 +64,9 @@ export function ProductsSection() {
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((p) => (
-            <div
+            <Link
+              href={p.href}
+              aria-label={`Ver solución ${p.title}`}
               key={p.title}
               className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all hover:shadow-lg"
             >
@@ -74,13 +84,13 @@ export function ProductsSection() {
                   {p.description}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
         <div className="mt-10 text-center">
           <Link
-            href="#contacto"
+            href="/#contacto"
             className="inline-flex items-center gap-2 rounded-full bg-brand-blue px-8 py-4 text-base font-semibold text-white transition-all hover:bg-brand-blue/90 hover:shadow-lg"
           >
             Maximiza el espacio de tu bodega aquí
